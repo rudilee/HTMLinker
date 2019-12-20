@@ -34,4 +34,10 @@ void main() {
 
     expect(renderTemplate(template, partials), expected);
   });
+
+  test('Listing HTML filenames inside directory', () {
+    var expected = ['header.html', 'body.html', 'footer.html'];
+
+    expect(listHtmlFilenames('test/samples'), unorderedEquals(expected));
+  });
 }
